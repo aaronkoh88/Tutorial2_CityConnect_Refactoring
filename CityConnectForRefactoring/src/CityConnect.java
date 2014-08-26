@@ -123,7 +123,7 @@ public class CityConnect {
 	}
 
 	public static String executeCommand(String userCommand) {
-		if (userCommand.trim().equals(""))
+		if (userCommand.trim().equals("")) 
 			return String.format(MESSAGE_INVALID_FORMAT, userCommand);
 
 		String commandTypeString = getFirstWord(userCommand);
@@ -256,7 +256,7 @@ public class CityConnect {
 		String newEndLocation = parameters[PARAM_POSITION_END_LOCATION];
 		String distance = parameters[PARAM_POSITION_DISTANCE];
 
-		if (!isPositiveNonZeroInt(distance)){
+		if (!isPositive(distance)){  //changed isPositiveNonZeroInt to isPositive
 			return String.format(MESSAGE_INVALID_FORMAT, userCommand);
 		}
 
@@ -320,7 +320,7 @@ public class CityConnect {
 						.equalsIgnoreCase(startLocation2));
 	}
 
-	private static boolean isPositiveNonZeroInt(String s) {
+	private static boolean isPositive(String s) {
 		try {
 			int i = Integer.parseInt(s);
 			//return true if i is greater than 0
