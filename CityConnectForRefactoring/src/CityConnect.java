@@ -322,9 +322,9 @@ public class CityConnect {
 
 	private static boolean isPositive(String s) {
 		try {
-			int i = Integer.parseInt(s);
+			int distance = Integer.parseInt(s);  //change 4: changed i to distance
 			//return true if i is greater than 0
-			return (i > 0 ? true : false);
+			return (distance > 0 ? true : false);
 		} catch (NumberFormatException nfe) {
 			return false;
 		}
