@@ -73,8 +73,8 @@ public class CityConnect {
 	private static final int PARAM_POSITION_DISTANCE = 2;
 
 	// This array will be used to store the routes
-	private static String[][] route = new String[MAX_ROUTES][3];  //change1: introduced constant
-
+	private static String[][] route = new String[MAX_ROUTES][PARAM_SIZE_FOR_ADD_ROUTE];  //change1: introduced constant
+																						//change 5, changed the 3 to PARAM_SIZE_FOR_ADD_ROUTE
 	/*
 	 * These are the locations at which various components of the route will be
 	 * stored in the routes[][] array.
