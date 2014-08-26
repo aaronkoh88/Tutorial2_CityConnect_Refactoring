@@ -73,7 +73,7 @@ public class CityConnect {
 	private static final int PARAM_POSITION_DISTANCE = 2;
 
 	// This array will be used to store the routes
-	private static String[][] route = new String[MAX_ROUTES][3];
+	private static String[][] route = new String[MAX_ROUTES][3];  //change1: introduced constant
 
 	/*
 	 * These are the locations at which various components of the route will be
@@ -102,8 +102,9 @@ public class CityConnect {
 		showToUser(WELCOME_MESSAGE);
 		while (true) {
 			System.out.print("Enter command:");
-			String command = scanner.nextLine();
-			String userCommand = command;
+			//String command = scanner.nextLine(); 
+			//String userCommand = command;             //CHANGE2: Merge these 2 lines
+			String userCommand = scanner.nextLine();
 			String feedback = executeCommand(userCommand);
 			showToUser(feedback);
 		}
